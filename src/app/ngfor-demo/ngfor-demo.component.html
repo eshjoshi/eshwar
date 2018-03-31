@@ -1,0 +1,25 @@
+<!--<ul>
+  <li *ngFor = "let coure of coures; index as ind" >
+     {{ind}}
+    {{coure.name}}
+    {{coure.date}}
+  </li>
+</ul>-->
+
+<button class="btn btn-primary" (dblclick)="loadCourse()">load</button>
+
+<ul>
+  <li *ngFor = "let coure of coures; trackBy:trackCourse" >
+    {{coure.name}}
+    {{coure.date}}
+  </li>
+</ul>
+
+<input type="text" appCustomDirective>
+
+
+<p appCustomDirective highlightColor="yellow">Highlighted in yellow</p>
+<p appCustomDirective [highlightColor]="'orange'">Highlighted in orange</p>
+
+
+

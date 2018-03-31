@@ -1,0 +1,16 @@
+<!--<i class="fa " 
+        [class.fa-star-o] = "isSelected"
+        [class.fa-star] ="!isSelected"
+         (click)="onclick()"></i>
+         {{"Total count"+count}}-->
+<!--input-->
+<div>
+      <button [disabled] = "isUpDisable" (click)="onUp()"><i class="fa fa-arrow-up" ></i></button>
+</div>
+<div><h2>{{count}}</h2></div>
+<div>
+      <button [disabled] = "isDownDisable" (click)="onDown()" ><i class="fa fa-arrow-down " ></i></button>
+</div>
+
+
+

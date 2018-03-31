@@ -1,0 +1,15 @@
+<!--<div id="name"></div>-->
+
+<!--<div id="hfhf"></div>   gen coding-->
+
+<ul>
+  <li>Name:- {{employee.Name | uppercase}}</li>
+  <li>DOJ:- {{employee.Doj | date:'medium' | uppercase}}</li>
+  <li>Degicntion:- {{employee.designation | lowercase}}</li>
+  <li>Address:- {{employee.Address | customSummeryPipe }}</li>
+  <li>Address:- {{employee.Address | textCamalcase }}</li>
+  <li>Slary:- {{employee.Salary | currency:'INR' }}</li>
+  <li>Slary:- {{employee.Salary | number }}</li>
+</ul>
+
+<!--angular defult pipe -->

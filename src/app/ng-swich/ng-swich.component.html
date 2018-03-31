@@ -1,0 +1,22 @@
+<ul class="nav">
+  <li class="nav-item">
+    <a class="nav-link active" href="#" (click)="onclick('red')">RED</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#" (click)="onclick('green')">GREEN</a>
+  </li>
+</ul>
+<div [ngSwitch]="color">
+    <div *ngSwitchCase="'red'" >
+      Red
+    </div>
+    <div *ngSwitchCase="'green'" >
+      Green
+    </div>
+    <div *ngSwitchCase="'blue'">
+      Blue
+    </div>
+    <div *ngSwitchDefault>
+      no color
+    </div>
+</div>

@@ -1,0 +1,9 @@
+<div>
+  <div *ngIf="isCouses()"> courses is available</div>
+  <div *ngIf="!isCouses()"> no courses is available</div>
+</div>
+
+<div>
+  <div [hidden]="!isCouses()"> courses is available</div>
+  <div [hidden]="isCouses()"> no courses is available</div>
+</div>

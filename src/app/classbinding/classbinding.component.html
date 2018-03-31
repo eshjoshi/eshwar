@@ -1,0 +1,21 @@
+
+
+        <!--<i class="fa fa-star" aria-hidden="true"></i>-->
+        <i class="fa " 
+        [class.fa-star-o] = "isSelected"
+        [class.fa-star] ="!isSelected"
+         (click)="onclick()"></i>
+
+<!--class data binding-->
+<i class="fa fa-heart" 
+[class.red] = "islike"
+[class.gray] = "!islike"
+(dblclick)="onDblCick()"
+></i> {{count}}
+
+
+
+        <!--<button >Click Me</button>-->
+
+
+      

@@ -1,0 +1,22 @@
+<!--<input (keyup)="onclick($event)"/>-->
+
+<!--simple event binding-->
+<!--<input (keyup)="onclick($event)"/>-->
+<!--event binding pass $event-->
+<!--<input (keyup.enter)="onclick($event)"/>-->
+<!--tempate variable event binding-->
+<!--<input #email (keyup.enter)="onclick(email)"/>-->
+
+<!--properties binding-->
+<!--<input [value]="email" />-->
+<!--keycode logic-->
+<!--<input [value]="email" (keypress)="onclick($event)"  (dblclick)="ondblclick()"  (mouseout)="mouseout()"/>-->
+
+<!--two way data binding traditional way of two way data binding-->
+<!--<input [value]="email" (click)="email=$event.target.value;onclick($event)" />-->
+<!--<input [value]="email" (click)="onclick($event)" />-->
+<!--two way  data binding in angular-->
+<!--<input [(value)]="email" (click)="onclick($event)" />-->
+
+<!--two way  data binding in angular added ng model-->
+<input [(ngModel)]="email" (click)="onclick()" />

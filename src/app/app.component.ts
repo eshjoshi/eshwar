@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  isSelected = true;
+  count = 10;
+  isUpDisable = false;
+  isDownDisable = false;
+ 
+  onDownEvent($event){
+    console.log("Clickd event initiated"+ $event);
+  }
 }

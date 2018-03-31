@@ -1,0 +1,13 @@
+    <!--ng class-->
+     <i class="fa " 
+        [ngClass] = "{
+          'fa-star-o' : isSelected,
+         'fa-star' : !isSelected
+        }"
+         (click)="onclick()"></i>
+<!--ng style-->
+       <i class="fa fa-star" 
+        [ngStyle] = "{
+          'color' : isSelected ? 'red':'blue'
+        }"
+         (click)="onclick()"></i>
