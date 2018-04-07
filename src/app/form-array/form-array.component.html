@@ -1,0 +1,18 @@
+<form [formGroup]="form">
+  <div class="form-group">
+    <label >Username</label>
+    <input 
+      type="text" class="form-control"
+      (keyup.enter)="addUserNames(username)" #username>
+    </div>
+    <ul class="list-group">
+      <li
+      *ngFor="let username of usernames.controls" 
+      class="list-group-item"
+      (click) ="removeUsername(username)"
+      >
+      {{username.value}}
+     
+    </li>
+    </ul>
+</form>

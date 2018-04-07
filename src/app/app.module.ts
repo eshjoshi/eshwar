@@ -32,11 +32,14 @@ import { CustomDirectiveDirective } from './directive/custom-directive.directive
 import { TemplateEventFormComponent } from './template-event-form/template-event-form.component';
 import { DemoTemplateFormComponent } from './demo-template-form/demo-template-form.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { FormArrayComponent } from './form-array/form-array.component';
+import { FormBuilderComponent } from './form-builder/form-builder.component';
+import { ChangePasswordComponent } from './change-password/change-password.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent,HelloWorld,AutherInfoComponent,LibariesComponent,AutherComponent,FlatsDetailComponent, AttributeDemoComponent, ClassbindingComponent, EventBindingComponent, StyleBindingComponent, AngularPipeComponent, CustomPipeComponentComponent, CustomSummeryPipePipe, IntercommComponent, TextCamalcasePipe, NgClassBindingComponent, NgcontentComponent, NgContainerComponent, NgifComponent, NgSwichComponent, NgForComponent, NgforDemoComponent, CustomDirectiveDirective, TemplateEventFormComponent, DemoTemplateFormComponent, ReactiveFormComponent
+    AppComponent,HelloWorld,AutherInfoComponent,LibariesComponent,AutherComponent,FlatsDetailComponent, AttributeDemoComponent, ClassbindingComponent, EventBindingComponent, StyleBindingComponent, AngularPipeComponent, CustomPipeComponentComponent, CustomSummeryPipePipe, IntercommComponent, TextCamalcasePipe, NgClassBindingComponent, NgcontentComponent, NgContainerComponent, NgifComponent, NgSwichComponent, NgForComponent, NgforDemoComponent, CustomDirectiveDirective, TemplateEventFormComponent, DemoTemplateFormComponent, ReactiveFormComponent, FormArrayComponent, FormBuilderComponent, ChangePasswordComponent
   ],
   imports: [  
     BrowserModule,FormsModule,ReactiveFormsModule
