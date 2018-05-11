@@ -10,7 +10,8 @@ import { CourseService } from './service/course.service';
 import { HelloWorld } from './hello-world.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
-import { NgModule } from '@angular/core';
+import { NgModule, ErrorHandler } from '@angular/core';
+import {HttpModule} from '@angular/http';
 import { AppComponent } from './app.component';
 import { AttributeDemoComponent } from './attribute-demo/attribute-demo.component';
 import { ClassbindingComponent } from './classbinding/classbinding.component';
@@ -35,16 +36,64 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { FormArrayComponent } from './form-array/form-array.component';
 import { FormBuilderComponent } from './form-builder/form-builder.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
+import { PostComponent } from './post/post.component';
+import { HttpService } from './common/httpService';
+import { PostServiceComponent } from './post-service/post-service.component';
+import { AppErrorHandler } from './common/error.error-handler';
+import { OptimisticComponent } from './optimistic/optimistic.component';
+import { OptimisticService } from './common/optimistic.service';
+import { GithubFollowersComponent } from './github-followers/github-followers.component';
+import { GithubFollowersService } from './common/github-followers.service';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { HomeComponent } from './home/home.component';
+import { GitHubProfileComponent } from './git-hub-profile/git-hub-profile.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { RouterModule } from '@angular/router';
+import { ArchiveProjectComponent } from './archive-project/archive-project.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent,HelloWorld,AutherInfoComponent,LibariesComponent,AutherComponent,FlatsDetailComponent, AttributeDemoComponent, ClassbindingComponent, EventBindingComponent, StyleBindingComponent, AngularPipeComponent, CustomPipeComponentComponent, CustomSummeryPipePipe, IntercommComponent, TextCamalcasePipe, NgClassBindingComponent, NgcontentComponent, NgContainerComponent, NgifComponent, NgSwichComponent, NgForComponent, NgforDemoComponent, CustomDirectiveDirective, TemplateEventFormComponent, DemoTemplateFormComponent, ReactiveFormComponent, FormArrayComponent, FormBuilderComponent, ChangePasswordComponent
+    AppComponent,HelloWorld,AutherInfoComponent,LibariesComponent,AutherComponent,FlatsDetailComponent, AttributeDemoComponent, ClassbindingComponent, EventBindingComponent, StyleBindingComponent, AngularPipeComponent, CustomPipeComponentComponent, CustomSummeryPipePipe, IntercommComponent, TextCamalcasePipe, NgClassBindingComponent, NgcontentComponent, NgContainerComponent, NgifComponent, NgSwichComponent, NgForComponent, NgforDemoComponent, CustomDirectiveDirective, TemplateEventFormComponent, DemoTemplateFormComponent, ReactiveFormComponent, FormArrayComponent, FormBuilderComponent, ChangePasswordComponent, PostComponent, PostServiceComponent, OptimisticComponent, GithubFollowersComponent, NotFoundComponent, HomeComponent, GitHubProfileComponent, NavbarComponent, ArchiveProjectComponent
   ],
   imports: [  
-    BrowserModule,FormsModule,ReactiveFormsModule
+    BrowserModule,FormsModule,ReactiveFormsModule,HttpModule,RouterModule.forRoot([
+      {
+        path: '',
+        component:HomeComponent
+      },
+      {
+        path: 'followers/:login/:id',
+        component:GitHubProfileComponent
+      },
+      {
+        path: 'followers',
+        component:GithubFollowersComponent
+      },
+      {
+        path: 'post',
+        component:OptimisticComponent
+      },
+      {
+        path: 'form',
+        component:ReactiveFormComponent
+      },
+      {
+        path: '**',
+        component:NotFoundComponent
+      },
+    ])
   ],
-  providers: [CourseService,AutherService,LibariesService,AutherInfoService,FlatDetailsService],
+  providers: [CourseService,
+    AutherService,
+    LibariesService,
+    AutherInfoService,
+    FlatDetailsService,
+    HttpService,
+    OptimisticService,
+    GithubFollowersService,
+  
+  {provide:ErrorHandler,useClass:AppErrorHandler}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
