@@ -110,3 +110,64 @@ In order to calculate the em equivalent for any pixel value required, you can us
 
 em = desired element pixel value / parent element font-size in pixels
 
+
+
+
+
+
+
+
+
+7. Alert Sumation
+alert(1+1+"5");  ===>25
+
+alert("5"+5+6);   ===> 556
+
+console.log(1+1+"5")  ===>25
+
+console.log("5"+1+1)  ===> 511
+
+first in console will be addition next string it will be work as string
+
+
+8. without change varilable set value
+
+login to print 0 1 1 2 3 5 8 13
+
+9. Difference betwwen AOT and JIT
+
+10. Choosen.jQuery use drop down part?
+
+11.Datatype two types premative
+
+12. hosting in javascript
+
+13.closer mean in javascript
+
+14. prototype in javascript
+
+15. inheritance in javascript
+
+16. prime number in javascript
+
+17. wordpress folder system
+18. whats is mean by Angular js in details
+
+19. whats is the directive why we are use directive in Angular.
+
+20. what is services why we are use service in angular
+
+21.bootstrap--> 
+22.  create it using JS 
+
+      *	  * * *
+      *	  *
+      * * * * *
+	  *   *
+      * * *   *	 
+
+
+23. what is mean by object in javascript
+
+24. Angualr js structure. 
+
