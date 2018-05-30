@@ -1,0 +1,58 @@
+<!--<div *ngFor ="let star of stars; let i = index">
+  <button 
+
+  (click)="check(i)"
+
+  >
+   Check me  
+  </button>
+
+  
+
+
+</div>
+{{pic}}-->
+
+
+<!--
+  <div class="float" *ngFor ="let star of stars; let i = index">
+     {{star}} {{isCheck+i}}
+    <span class="glyphicon"
+    [ngClass]= "{
+      'glyphicon-star': isCheck0 || isCheck+i ,
+      'glyphicon-star-empty': !isCheck0 || !isCheck+i
+    }"
+    (click)="check(i)">  
+    </span>
+  </div>-->
+
+   <span  *ngFor ="let isChecks of isCheck; let i = index" >
+    
+    <span  class="glyphicon"
+    [ngClass]= "{
+      'glyphicon-star': isChecks ,
+      'glyphicon-star-empty': !isChecks
+    }"
+    (mouseover)="onCheck(i)">  
+    </span>
+  
+
+
+    <!--<span class="glyphicon"
+    [ngClass]= "{
+      'glyphicon-star': isCheck2 ,
+      'glyphicon-star-empty': !isCheck2
+    }"
+    (mouseover)="onCheck(1)">  
+    </span>
+
+
+    <span class="glyphicon"
+    [ngClass]= "{
+      'glyphicon-star': isCheck3,
+      'glyphicon-star-empty': !isCheck3
+    }"
+    (mouseover)="onCheck(2)">  
+    </span>-->
+
+  </span>
