@@ -1,0 +1,60 @@
+<div class="container">
+    <div class="jumbotron">
+        <form  [formGroup]="form">
+            <div class="form-group">
+                <label for="Set Date">Set Date</label>
+                <input type = "date"
+                       formControlName="date"
+                       id="date" 
+                      
+                        class="form-control"/>
+                <div *ngIf="date.pending">Checking....</div>
+                    <div class="alert alert-danger" *ngIf="date.touched && !date.valid ">
+                    <div *ngIf="date.errors.required"> Date is required</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="Set Date">Set Time</label>
+                <input type = "time"
+                       formControlName="time"
+                       id="time" 
+                     
+                      class="form-control"/>
+                <div *ngIf="time.pending">Checking ....</div>
+                <div class="alert alert-danger" *ngIf="time.touched && !time.valid ">
+                     <div *ngIf="time.errors.required"> Time is required</div>
+                </div>
+            </div>
+               <div class="form-group">
+                <label for="Set Date">Comment</label>
+                <textarea
+                       formControlName="comment"
+                       id="comment" 
+                      class="form-control"></textarea>
+                <div *ngIf="time.pending">Checking comment ....</div>
+                <div class="alert alert-danger" *ngIf="comment.touched && !comment.valid ">
+                     <div *ngIf="comment.errors.required"> comment is required</div>
+                </div>
+            </div>
+ 
+            <button class="btn btn-primary" (click)="log()" >submit</button>
+        </form>
+    </div>
+</div>
+
+<div>
+    <div><span>date1:----</span><span>{{currentTime | date:'yyyy-MM-dd hh:mm:ss a z'}}</span></div>
+    <div><span>date2:---</span><span>{{date2 | date:'yyyy-MM-dd hh:mm:ss a z' }}</span></div>
+    <div><span>Diff Year :---</span><span>{{diffYear  }}</span></div>
+    <div><span>Diff Days:---</span><span>{{diffDays  }}</span></div>
+    <div><span>Diff Hours:---</span><span>{{diffHours  }}</span></div>
+    <div><span>Diff Minites:---</span><span>{{diffMinite  }}</span></div>
+    <div><span>Diff second:---</span><span>{{diffSecond  }}</span></div>
+</div>
+
+
+
+<div class="esh-clock">
+    <div class="esh-clock-time"> {{diffDays  }} : {{diffHours  }} : {{diffMinite  }} : {{diffSecond  }}</div> 
+</div>
+

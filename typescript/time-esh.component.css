@@ -1,0 +1,23 @@
+  .esh-clock{
+    width:  60%;
+    height: 100px;
+    background-color: #291818;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border: 5px solid #7FFF00;
+    border-radius: 10%;
+    color: #fff;
+    box-shadow: 5px 5px #888890;
+   
+  }  
+
+  .esh-clock-time {
+    
+    font-size: 60px;
+    font-family: cursive;
+    padding-left: 5%;
+}
