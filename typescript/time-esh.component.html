@@ -51,10 +51,21 @@
     <div><span>Diff Minites:---</span><span>{{diffMinite  }}</span></div>
     <div><span>Diff second:---</span><span>{{diffSecond  }}</span></div>
 </div>
+<div   *ngIf= "videoStart == true"  >
+    <!--<div *ngFor="let superVideo of superVideos">-->
+   {{superVideo}}
+<video width="400" controls>
+   
+  <source [src]="videoUrl" type="video/mp4">
+  <!--<source src="assets/video/mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.-->
+</video>
+    <!--</div>-->
+</div>
 
 
-
+<!--
 <div class="esh-clock">
     <div class="esh-clock-time"> {{diffDays  }} : {{diffHours  }} : {{diffMinite  }} : {{diffSecond  }}</div> 
-</div>
+</div>-->
 
